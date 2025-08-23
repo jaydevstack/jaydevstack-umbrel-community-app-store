@@ -1,0 +1,32 @@
+manifestVersion: 1
+id: jaydevstack-store-miner-radar
+name: Miner Radar
+tagline: Keep your miners on your radar
+icon: https://svgur.com/i/mvA.svg
+category: Mining
+version: "0.0.1"
+port: 3000
+description: >-
+   Hashrate, temps, and more — at a glance.
+   All your miners, one dashboard.
+   From chips to charts in seconds.
+   Always in sight, real-time peace of mind.
+   Monitor performance. Maximize uptime. Because every hash counts.
+   Always Watching. Eyes on Hash.
+   Mine Smarter. Numbers Matter.
+developer: Jay Devstack
+website: https://minerradar.com
+submitter: 
+submission: 
+repo: 
+support: 
+gallery:
+  - https://i.imgur.com/yyVG0Jb.jpeg
+  - https://i.imgur.com/yyVG0Jb.jpeg
+  - https://i.imgur.com/yyVG0Jb.jpeg
+releaseNotes: >-
+  This version is very alpha, but still it's a usable MVP
+dependencies: [mempool]
+path: ""
+defaultUsername: ""
+defaultPassword: ""
