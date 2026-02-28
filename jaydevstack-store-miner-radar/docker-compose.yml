@@ -6,7 +6,7 @@ services:
     environment:
       # The format here is: <app-id>_<docker-service-name>_1
       APP_HOST: jaydevstack-store-miner-radar_server_1
-      APP_PORT: 3000
+      APP_PORT: 3001
     
   server:
     image: jaydevstack/miner-radar:v0.1.0@sha256:856de064513ac977d12d5763a1d0cf9783f799a301ed33249519bc91de8754b5
