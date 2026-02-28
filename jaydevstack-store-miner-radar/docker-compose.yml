@@ -9,7 +9,7 @@ services:
       APP_PORT: 3000
     
   server:
-    image: jaydevstack/miner-radar:v0.0.1@sha256:2b943a35096b959ebed22c027bc5f296537aced266ab73216a91624d401745e0
+    image: jaydevstack/miner-radar:v0.1.0@sha256:856de064513ac977d12d5763a1d0cf9783f799a301ed33249519bc91de8754b5
     init: true
     restart: on-failure
     stop_grace_period: 1m
