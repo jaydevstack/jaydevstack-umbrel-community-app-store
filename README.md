@@ -1,21 +1,46 @@
-## Umbrel Community App Store Template
+## Umbrel Community App Store - JAYDEVSTACK
 
-This repository is a template to create an Umbrel Community App Store. These additional app stores allow developers to distribute applications without submitting to the [Official Umbrel App Store](https://github.com/getumbrel/umbrel-apps).
+This repository contains the JAYDEVSTACK Community App Store for Umbrel, featuring the Miner Radar application.
 
-## How to use:
+## Apps in this store:
 
-1. Start by clicking the "Use this template" button located above.
-2. Assign an ID and name to your app store within the `umbrel-app-store.yml` file. This file specifies two important attributes:
-    - `id` - Acts as a unique prefix for every app within your Community App Store. You must start your application's ID with your app store's ID. For instance, in this template, the app store ID is `sparkles`, and there's an app named `hello world`. Consequently, the app's ID should be: `sparkles-hello-world`.
-    - `name` - This is the name of the Community App Store displayed in the umbrelOS UI.
-3. Change the name of the `sparkles-hello-world` folder to match your app's ID. The app ID is for you to decide. For example, if your app store ID is `whistles`, and your app is named My Video Downloader, you could set its app ID to `whistles-my-video-downloader`, and rename the folder accordingly.
-4. Next, enter your app's listing details in the `whistles-my-video-downloader/umbrel-app.yml`. These are displayed in the umbrelOS UI.
-5. Include the necessary Docker services in `whistles-my-video-downloader/docker-compose.yml`.
-6. That's it! Your Community App Store, featuring your unique app, is now set up and ready to go. To use your Community App Store, you can add its GitHub url the umbrelOS user interface as shown in the following demo:
+### Miner Radar
+Monitor your Bitcoin miners in real-time. Track hashrate, temperature, and performance metrics across all your mining hardware from a single dashboard.
 
+## Installation
 
-https://user-images.githubusercontent.com/10330103/197889452-e5cd7e96-3233-4a09-b475-94b754adc7a3.mp4
+Add this Community App Store to your Umbrel:
 
+1. Open your Umbrel dashboard
+2. Go to App Store settings
+3. Add Community App Store with this URL:
+   ```
+   https://github.com/jaydevstack/jaydevstack-umbrel-community-app-store
+   ```
 
-my store:
-https://github.com/jaydevstack/jaydevstack-umbrel-community-app-store
+## Deployment Instructions
+
+After making changes to the app configuration:
+
+1. Commit and push changes to GitHub
+2. On your Umbrel server, clear the cached docker-compose.yml:
+   ```bash
+   sudo rm -rf /home/umbrel/umbrel/app-data/jaydevstack-store-miner-radar/
+   ```
+3. Restart the Umbrel daemon:
+   ```bash
+   sudo systemctl restart umbreld
+   ```
+4. Uninstall and reinstall the app from the Umbrel UI
+
+## Network Configuration
+
+The Miner Radar app uses `network_mode: host` for the server container to access miners on your local network (192.168.x.x addresses). The app_proxy uses `extra_hosts` with `host-gateway` to communicate with the server running in host mode.
+
+## App Details
+
+- Store ID: `jaydevstack-store`
+- App ID: `jaydevstack-store-miner-radar`
+- External Port: 3021
+- Internal Port: 3000
+- Docker Image: `jaydevstack/miner-radar:v0.1.0`
