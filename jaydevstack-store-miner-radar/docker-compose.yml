@@ -5,11 +5,11 @@ services:
   app_proxy:
     environment:
       # Server uses host network mode to access LAN miners
-      # Connect via localhost which is mapped to host gateway
-      APP_HOST: localhost
+      # Connect via host.docker.internal which maps to host
+      APP_HOST: host.docker.internal
       APP_PORT: 3000
     extra_hosts:
-      - "localhost:host-gateway"
+      - "host.docker.internal:host-gateway"
     
   server:
     image: jaydevstack/miner-radar:v0.1.0@sha256:856de064513ac977d12d5763a1d0cf9783f799a301ed33249519bc91de8754b5
