@@ -4,7 +4,7 @@ name: Miner Radar
 tagline: Keep your miners on your radar
 icon: https://svgur.com/i/mvA.svg
 category: Mining
-version: "0.1.0"
+version: "0.1.2"
 port: 3021
 description: >-
    Hashrate, temps, and more — at a glance.
@@ -25,7 +25,8 @@ gallery:
   - https://i.imgur.com/yyVG0Jb.jpeg
   - https://i.imgur.com/yyVG0Jb.jpeg
 releaseNotes: >-
-  This version is very alpha, but still it's a usable MVP
+  v0.1.2: Fixed WebSocket connection over Tor - now works with Tor Browser access.
+  Network configuration updated to support Tailscale subnet routing for remote miners.
 dependencies: [mempool]
 path: ""
 defaultUsername: ""

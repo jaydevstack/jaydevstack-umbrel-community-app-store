@@ -12,7 +12,7 @@ services:
       - "host.docker.internal:host-gateway"
     
   server:
-    image: jaydevstack/miner-radar:v0.1.0@sha256:856de064513ac977d12d5763a1d0cf9783f799a301ed33249519bc91de8754b5
+    image: jaydevstack/miner-radar:v0.1.2@sha256:fe7f94d70a294ca907c0a02dc3e506a54d805a1e721b30e058443269b41a6b25
     init: true
     restart: on-failure
     stop_grace_period: 1m
